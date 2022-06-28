@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>NIME Workshop - ACIDS</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="content">
+    <div class="leftColumn">
+      <div class="header">
+        <div class="title">
+          <h1>RaspiRAVE</h1>
+          <h4>NIME 2022 Workshop<br>IRCAM - ACIDS</h4>
+        </div>
+      </div>
+
+      <div id="NetworkController">
+        <h2 class="sectionTitle">Network</h2>
+        <div class="sectionContent NetworkController" style="flex-direction: column;">
+          <input type="text" id="ip" placeholder="localhost" size="15" required>
+          <input type="text" id="port" placeholder="8001" size="5" required>
+          <button type="button" id="connectButton">Connect</button>
+        </div>
+      </div>
+
+      <div id="AudioController">
+        <h2 class="sectionTitle">Audio controls</h2>
+        <div class="sectionContent" style="align-items: center;">
+          <div class="flexRow">
+            <button type="button" id="play_button">Play</button>
+            <button type="button" id="pause_button">Pause</button>
+          </div>
+          <div>
+            <p>Output volume</p>
+            <input type="range" min="1" max="100" value="50" class="slider" id="outputVolume">
+          </div>
+          <div class="flexRow">
+            <button type="button" id="play_original">Play original sample</button>
+            <button type="button" id="play_external">Play external sample</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="SetupController">
+        <h2 class="sectionTitle">Setup</h2>
+        <div class="sectionContent SetupController">
+          <div style="100%;">
+            <p>Model:</p>
+            <select id="modelSelector" multiple>
+            </select>
+          </div>
+          <div style="100%;">
+            <p>Original sample:</p>
+            <select id="originalSampleSelector" multiple>
+            </select>
+          </div>
+          <div style="100%;">
+            <p>External sample:</p>
+            <select id="externalSampleSelector" multiple>
+            </select>
+          </div>
+          <button type="button" id="change_model_sample">Update</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="DescriptorsContent" class="rightColumn">
+      <div class="DescriptorsController" id="consoleWrapper">
+        <h2 class="sectionTitle">Console</h2>
+        <div class="sectionContent">
+          <ul id="console"></ul>
+        </div>
+      </div>
+
+      <!-- <div class="DescriptorsController" id="chartWrapper">
+        <h2 class="sectionTitle">Graph</h2>
+        <div class="sectionContent">
+          <canvas id="graph"></canvas>
+        </div>
+      </div> -->
+
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+  <script src="./scripts/main.js" type="module"></script>
+</body>
+
+</html>
