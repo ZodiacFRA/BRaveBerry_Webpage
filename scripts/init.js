@@ -16,19 +16,28 @@ function init(socket) {
   document.getElementById("DescriptorsContent").style.display = "flex";
   //////////////////////////////////////////////////
   // Add Audio Controls networking callbacks
-  // Play button
-  document.getElementById("play_button").onclick = function(event) {
+  // Play / Pause button
+  var play_button = document.getElementById("play_button")
+  play_button.onclick = function(event) {
     var event = {
       type: "play",
+      state: play_button.checked
+    }
+    socket.send(JSON.stringify(event));
+  }
+  // Record button
+  document.getElementById("record_button").onclick = function(event) {
+    var event = {
+      type: "record",
       state: true
     }
     socket.send(JSON.stringify(event));
   }
-  // Pause button
-  document.getElementById("pause_button").onclick = function(event) {
+  // Playback button
+  document.getElementById("playback_button").onclick = function(event) {
     var event = {
-      type: "play",
-      state: false
+      type: "playback",
+      state: true
     }
     socket.send(JSON.stringify(event));
   }

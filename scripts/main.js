@@ -1,7 +1,6 @@
 import {
   populateSetupControllerLists
 } from "./Setup.js";
-
 import {
   init
 } from "./init.js";

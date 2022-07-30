@@ -11,7 +11,7 @@
     <div class="leftColumn">
       <div class="header">
         <div class="title">
-          <h1>BRaveBerry</h1>
+          <h1>BraveBerry Client</h1>
           <h4>NIME 2022 Workshop<br>IRCAM - ACIDS</h4>
         </div>
       </div>
@@ -28,9 +28,25 @@
       <div id="AudioController">
         <h2 class="sectionTitle">Audio controls</h2>
         <div class="sectionContent" style="align-items: center;">
+          <div class="toggle_button">
+            <label>
+              <input type="checkbox" id="play_button"><span>Play / Pause</span>
+            </label>
+          </div>
+
           <div class="flexRow">
-            <button type="button" id="play_button">Play</button>
-            <button type="button" id="pause_button">Pause</button>
+            <div class="toggle_button">
+              <label>
+                <input type="checkbox" id="record_button"><span>Record</span>
+              </label>
+            </div>
+            <!-- <input type="checkbox" id="record_button">Record</input> -->
+            <div class="toggle_button">
+              <label>
+                <input type="checkbox" id="playback_button"><span>Playback</span>
+              </label>
+            </div>
+            <!-- <input type="checkbox" id="playback_button">Playback</input> -->
           </div>
           <div>
             <p>Output volume</p>

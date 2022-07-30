@@ -105,7 +105,7 @@ function getWaveformChoice(descriptor, socket) {
     res = res + "; " + getRandomSvgPath();
   }
   res = start + res + "; " + start;
-  console.log(res);
+  // console.log(res);
   fieldset.appendChild(getLfoRadioInput(
     descriptor,
     socket,
